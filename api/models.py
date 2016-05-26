@@ -10,3 +10,13 @@ class Pokemon(models.Model):
 
     def __str__(self):
         return self.name
+
+class Nba(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    picture = models.ImageField()
+    picture_url = models.URLField()
+    Position = models.TextField()
+    Team = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
